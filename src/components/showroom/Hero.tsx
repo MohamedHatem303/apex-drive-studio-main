@@ -55,11 +55,6 @@ export const Hero = () => {
       <div className="mx-auto grid min-h-[100svh] max-w-7xl items-center gap-8 overflow-hidden px-4 py-10 sm:px-6 lg:grid-cols-[1.05fr_0.95fr] lg:px-8 lg:py-10">
         {/* Left */}
         <div className="mx-auto flex max-w-2xl flex-col items-center text-center lg:mx-0 lg:items-start lg:text-left">
-          <div className="inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/5 px-4 py-2 text-[11px] tracking-[0.26em] text-cyan-200/80 uppercase backdrop-blur-md">
-            <Sparkles size={14} />
-            Premium automotive collection
-          </div>
-
           <h1 className="mt-5 text-center text-5xl font-black leading-[0.92] sm:text-6xl md:text-7xl lg:text-left xl:text-8xl">
             PERFORMANCE,
             <br />
