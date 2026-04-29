@@ -85,7 +85,8 @@ export const Loader = ({ onComplete }: LoaderProps) => {
   return (
     <div
       ref={containerRef}
-      className="fixed inset-0 z-[100] flex flex-col items-center justify-center bg-background"
+      className="fixed inset-0 z-[100] flex flex-col items-center justify-center bg-background overflow-hidden"
+      // ↑ أضفنا overflow-hidden هنا — ده بيمنع أي عنصر داخلي من إنه يعمل scrollbar
     >
       <div className="pointer-events-none absolute inset-0 bg-gradient-hero" />
 
@@ -94,8 +95,12 @@ export const Loader = ({ onComplete }: LoaderProps) => {
       </div>
 
       {/* Gauge + Button Wrapper */}
-      <div className="flex flex-col items-center">
-        <div className="relative h-[280px] w-[280px] sm:h-[360px] sm:w-[360px]">
+      <div className="flex flex-col items-center w-full max-w-[90vw] mx-auto">
+        {/* ↑ أضفنا w-full max-w-[90vw] mx-auto عشان نضمن إن الـ gauge مش بيتجاوز الشاشة */}
+
+        <div className="relative h-[280px] w-[280px] sm:h-[360px] sm:w-[360px] shrink-0">
+          {/* ↑ أضفنا shrink-0 عشان الـ gauge ميتضغطش */}
+
           <div className="absolute inset-0 rounded-full border border-border/60 bg-gradient-metal shadow-elegant" />
           <div className="absolute inset-3 rounded-full border border-border/40" />
 

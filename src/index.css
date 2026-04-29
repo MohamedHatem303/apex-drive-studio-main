@@ -161,3 +161,7 @@
 .animate-pulse-glow {
   animation: pulse-glow 2.5s ease-in-out infinite;
 }
+html, body {
+  overflow-x: hidden;
+  width: 100%;
+}

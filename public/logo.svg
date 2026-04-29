@@ -1,0 +1,48 @@
+<svg width="900" height="360" viewBox="0 0 900 360" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <!-- Main gradients -->
+    <linearGradient id="metal" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#FFFFFF"></stop>
+      <stop offset="100%" stop-color="#9CA3AF"></stop>
+    </linearGradient>
+
+    <linearGradient id="speed" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#3B82F6"></stop>
+      <stop offset="100%" stop-color="#06B6D4"></stop>
+    </linearGradient>
+
+    <!-- Glow -->
+    <filter id="glow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="6" result="blur"></feGaussianBlur>
+      <feMerge>
+        <feMergeNode in="blur"></feMergeNode>
+        <feMergeNode in="SourceGraphic"></feMergeNode>
+      </feMerge>
+    </filter>
+  </defs>
+
+  <!-- Background -->
+  <rect width="900" height="360" rx="28" fill="#0A0F1C"></rect>
+
+  <!-- Speed lines -->
+  <g opacity="0.5" stroke="url(#speed)" stroke-width="6" stroke-linecap="round">
+    <line x1="80" y1="90" x2="220" y2="90"></line>
+    <line x1="60" y1="130" x2="240" y2="130"></line>
+    <line x1="90" y1="170" x2="210" y2="170"></line>
+  </g>
+
+  <!-- A Letter (sharp apex style) -->
+  <path d="M180 270L270 60H330L420 270H365L345 220H255L235 270H180Z" fill="url(#metal)"></path>
+
+  <!-- Inner cut for A -->
+  <path d="M275 185H325L300 115L275 185Z" fill="#0A0F1C"></path>
+
+  <!-- M Letter (aggressive angled) -->
+  <path d="M460 270V60H520L585 170L650 60H710V270H660V130L600 240H570L510 130V270H460Z" fill="url(#speed)" filter="url(#glow)"></path>
+
+  <!-- Accent underline -->
+  <rect x="180" y="300" width="520" height="6" rx="3" fill="url(#speed)"></rect>
+
+  <!-- Top accent (like car roof line) -->
+  <path d="M250 55H600" stroke="url(#speed)" stroke-width="4" stroke-linecap="round"></path>
+</svg>
